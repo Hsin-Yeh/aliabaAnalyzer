@@ -4,7 +4,7 @@ This should be a starting point for new comers to get familiar with c++ and root
 * Download and build
 #+BEGIN_SRC bash
 git clone https://github.com/Hsin-Yeh/aliabaAnalyzer.git
-pip easy-install pip
+sudo easy-install pip
 pip install --user numpy root_numpy h5py
 make 
 #+END_SRC
