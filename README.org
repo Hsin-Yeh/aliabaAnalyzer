@@ -23,6 +23,12 @@ The output root file will be in the data directory
 ls data/test.root
 ./makePlots
 #+END_SRC
+
+If you want to display plots on your screen
+#+BEGIN_SRC bash
+./makePlots -s
+#+END_SRC
+
 You will find the output root file in root_plot. Open it with root TBrowser and check the plots inside. Before you start extending this code and begin to build your own analysis program, please check the tips below.
 
 * Tips
@@ -37,6 +43,7 @@ git push --set-upstream origin your_branch_name
 **** Reason :
 ***** Make the master branch clean
 ***** Push your code, and share how you accomplish these exercises, also learn from others 
+***** Don't be shy to change the code in your own branch, the master branch should be just a template. Be Wild! If anything went wrong, the master branch is still there for you to reset!
 
 *** Read the comments 
 I have written down comments in the code, so please check them out.
