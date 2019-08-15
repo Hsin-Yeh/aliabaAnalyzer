@@ -36,7 +36,7 @@ You will find the output root file in "root_plot" and output pdf plots in "plots
 
 * Tips
 *** Get familiar with Git.
-I would recommend after you clone this code to local, checkout to your own branch and build your own code there. 
+I would recommend after you clone this code to local, checkout to your own branch and build your own code there. If you haven't have a github account, I would suggest you to create one first on https://github.com
 #+BEGIN_SRC bash
 git branch
 git checkout -b your_branch_name
