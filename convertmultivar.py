@@ -63,7 +63,7 @@ for fn in fname:
     kstart = fn.rfind('/')+1
     kend   = fn.find('.hdf5')
     fout   = fn[kstart:kend]
-    print 'Output file will be '+fout+'.root'
+    print 'Output file will be '+'data/'+fout+'.root'
 
     array2root(out_e,'data/'+fout+'.root','tree', mode='recreate')
     array2root(out_c,'data/'+fout+'.root','tree', mode='update')
