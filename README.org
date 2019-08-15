@@ -2,12 +2,14 @@ This is an example code for alibava analysis written with c++ and root. It creat
 This should be a starting point for new comers to get familiar with c++ and root, also to understand the basic concepts of the hardware part of the detectors, and to do some analysis with real data taken from the alibava system. 
 
 * Download and build
+*root is required, if you haven't install it, please go to https://root.cern.ch and download it first!*
 #+BEGIN_SRC bash
 git clone https://github.com/Hsin-Yeh/aliabaAnalyzer.git
 sudo easy_install pip
 pip install --user numpy root_numpy h5py
 make 
 #+END_SRC
+
 *The pip install method works for me, but maybe not for other users. Should write a more general method here!!*
 *Basically we will need numpy, root_numpy, h5py module for python code*
 
