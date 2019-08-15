@@ -30,7 +30,7 @@ If you want to display plots on your screen
 ./makePlots -s
 #+END_SRC
 
-You will find the output root file in root_plot. Open it with root TBrowser and check the plots inside. Before you start extending this code and begin to build your own analysis program, please check the tips below.
+You will find the output root file in "root_plot" and output pdf plots in "plots". Open the root file with root TBrowser and check the plots inside. Before you start extending this code and begin to build your own analysis program, please check the tips below.
 
 * Tips
 *** Get familiar with Git.

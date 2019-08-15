@@ -174,6 +174,12 @@ void makePlots::Loop()
 		gPad->WaitPrimitive();
 	}
 
+	// Save plots to pdf
+	sprintf(title,"plots/%s_pedestal.pdf",outf.c_str());
+	g_pedestal->SaveAs(title);
+	sprintf(title,"plots/%s_noise.pdf",outf.c_str());
+	g_noise->SaveAs(title);
+
 	/// Write Graph to file 
 	outfile->cd();  // You could create another TDirectory to write the graphs 
 	g_pedestal->Write();
