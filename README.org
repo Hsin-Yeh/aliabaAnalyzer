@@ -1,0 +1,55 @@
+This is an example code for alibava analysis written with c++ and root. It creates a root file with pedestal histograms and noise graphs. Ihis should be a starting point for new comers to get familiar with c++ and root, also to understand the basic concepts of the hardware part of the detectors, and to do some analysis with real data taken from the alibava system. 
+
+* Download and build
+#+BEGIN_SRC bash
+git clone 
+pip easy-install pip
+pip install --user numpy root_numpy h5py
+make 
+#+END_SRC
+*The pip install method works for me, but maybe not for other users. Should write a more general method here!!*
+*Basically we will need numpy, root_numpy, h5py module for python code*
+
+* Data Convertion 
+The output data format from the alibava program should be hdf5. We will convert it to a root file by executing:
+#+BEGIN_SRC shell
+python convertmultivar.py data/test.hdf5
+#+END_SRC 
+The output root file will be in the data directory 
+
+
+* Run the analysis code
+#+BEGIN_SRC bash
+ls data/test.root
+./makePlots
+#+END_SRC
+You will find the output root file in root_plot. Open it with root TBrowser and check the plots inside. Before you start extending this code and begin to build your own analysis program, please check the tips below.
+
+* Tips
+*** Get familiar with Git.
+I would recommend after you clone this code to local, checkout to your own branch and build your own code there. 
+#+BEGIN_SRC bash
+git branch
+git checkout -b your_branch_name
+git branch
+git push --set-upstream origin your_branch_name
+#+END_SRC
+**** Reason :
+***** Make the master branch clean
+***** Push your code, and share how you accomplish these exercises, also learn from others 
+
+*** Read the comments 
+I have written down comments in the code, so please check them out.
+
+*** Follow the alibava manual and go through all the exercises you can!
+
+
+* Reference 
+Alibava website : https://www.alibavasystems.com/products-alibava-systems/educational-equipment-alibava-systems/easy-alibava-systems.html
+
+Alibava user's manual : https://www.alibavasystems.com/images/EASy-exercises/EASY-Exercise-Book.pdf
+
+
+
+
+
