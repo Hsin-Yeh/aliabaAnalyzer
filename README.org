@@ -1,4 +1,5 @@
-This is an example code for alibava analysis written with c++ and root. It creates a root file with pedestal histograms and noise graphs. Ihis should be a starting point for new comers to get familiar with c++ and root, also to understand the basic concepts of the hardware part of the detectors, and to do some analysis with real data taken from the alibava system. 
+This is an example code for alibava analysis written with c++ and root. It creates a root file with pedestal histograms and noise graphs. 
+This should be a starting point for new comers to get familiar with c++ and root, also to understand the basic concepts of the hardware part of the detectors, and to do some analysis with real data taken from the alibava system. 
 
 * Download and build
 #+BEGIN_SRC bash
@@ -41,9 +42,9 @@ git branch
 git push --set-upstream origin your_branch_name
 #+END_SRC
 **** Reason :
-***** Make the master branch clean
-***** Push your code, and share how you accomplish these exercises, also learn from others 
-***** Don't be shy to change the code in your own branch, the master branch should be just a template. Be Wild! If anything went wrong, the master branch is still there for you to reset!
+***** 1. Make the master branch clean
+***** 2. Push your code, and share how you accomplish these exercises, also learn from others 
+***** 3. Don't be shy to change the code in your own branch, the master branch should be just a template. Be Wild! If anything went wrong, the master branch is still there for you to reset!
 
 *** Read the comments 
 I have written down comments in the code, so please check them out.
