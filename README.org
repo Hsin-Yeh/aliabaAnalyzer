@@ -2,76 +2,76 @@ This is an example code for alibava analysis written with c++ and root. It creat
 This should be a starting point for new comers to get familiar with c++ and root, also to understand the basic concepts of the hardware part of the detectors, and to do some analysis with real data taken from the alibava system. 
 
 * Download and build
-*root is required, if you haven't install it, please go to https://root.cern.ch and download it first!*
-#+BEGIN_SRC sh
+  *root is required, if you haven't install it, please go to https://root.cern.ch and download it first!*
+  #+BEGIN_SRC sh
 git clone https://github.com/Hsin-Yeh/aliabaAnalyzer.git
 cd alibavaAnalyzer
 sudo easy_install pip
 pip install --user numpy root_numpy h5py
 make 
-#+END_SRC
+  #+END_SRC
 
-*The pip install method works for me, but maybe not for other users. Should write a more general method here!!*
-*Basically we will need numpy, root_numpy, h5py module for python code*
+  *The pip install method works for me, but maybe not for other users. Should write a more general method here!!*
+  *Basically we will need numpy, root_numpy, h5py module for python code*
 
 * Data Convertion 
-The output data format from the alibava program should be hdf5. We will convert it to a root file by executing:
-#+BEGIN_SRC sh
+  The output data format from the alibava program should be hdf5. We will convert it to a root file by executing:
+  #+BEGIN_SRC sh
 python convertmultivar.py data/test.hdf5
-#+END_SRC 
-The output root file will be in the data directory 
+  #+END_SRC 
 
+  The output root file will be in the data directory 
 
 * Run the analysis code
-#+BEGIN_SRC sh
-ls data/test.root
+  #+BEGIN_SRC sh
+ls data/test.root > input.txt
 ./makePlots
-#+END_SRC
+  #+END_SRC
 
-If you want to display plots on your screen
-#+BEGIN_SRC sh
+  If you want to display plots on your screen
+  #+BEGIN_SRC sh
 ./makePlots -s
-#+END_SRC
+  #+END_SRC
 
-You will find the output root file in "root_plot" and output pdf plots in "plots". Open the root file with root TBrowser and check the plots inside. Before you start extending this code and begin to build your own analysis program, please check the tips below.
+  You will find the output root file in "root_plot" and output pdf plots in "plots". Open the root file with root TBrowser and check the plots inside. Before you start extending this code and begin to build your own analysis program, please check the tips below.
 
 * Tips
 *** Get familiar with Git.
-I would recommend after you clone this code to local, checkout to your own branch and build your own code there. If you haven't have a github account, I would suggest you to create one first on https://github.com
-#+BEGIN_SRC sh
+    I would recommend after you clone this code to local, checkout to your own branch and build your own code there. If you haven't have a github account, I would suggest you to create one first on https://github.com
+    #+BEGIN_SRC sh
 git branch
 git checkout -b your_branch_name
 git branch
 git push --set-upstream origin your_branch_name
-#+END_SRC
+    #+END_SRC
 
-After you made your modifications, basic git commands to push
-#+BEGIN_SRC sh
+    After you made your modifications, basic git commands to push
+    #+BEGIN_SRC sh
 git commit -a
 git push
-#+END_SRC
+    #+END_SRC
 
-and pull
-#+BEGIN_SRC sh
+    and pull
+    #+BEGIN_SRC sh
 git pull
-#+END_SRC
+    #+END_SRC
 
-Reason:
-1. Make the master branch clean
-2. Learn how to use git
-3. Push your code, and share how you accomplish these exercises, also learn from others 
-4. Don't be shy to change the code in your own branch, the master branch should be just a template. Be Wild! If anything went wrong, the master branch is still there for you to reset!
+    Reason:
+    1. Make the master branch clean
+    2. Learn how to use git
+    3. Push your code, and share how you accomplish these exercises, also learn from others 
+    4. Don't be shy to change the code in your own branch, the master branch should be just a template. Be Wild! If anything went wrong, the master branch is still there for you to reset!
 
 *** Read the comments 
-I have written down comments in the code, so please check them out.
+    I have written down comments in the code, so please check them out.
 
 *** Follow the alibava manual and go through all the exercises you can!
 
 
 * Reference 
-Alibava website : https://www.alibavasystems.com/products-alibava-systems/educational-equipment-alibava-systems/easy-alibava-systems.html
+  Alibava website : https://www.alibavasystems.com/products-alibava-systems/educational-equipment-alibava-systems/easy-alibava-systems.html
 
-Alibava user's manual : https://www.alibavasystems.com/images/EASy-exercises/EASY-Exercise-Book.pdf
+  Alibava user's manual : https://www.alibavasystems.com/images/EASy-exercises/EASY-Exercise-Book.pdf
 
 
 
