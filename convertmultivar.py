@@ -11,17 +11,17 @@ if len(sys.argv) != 1:
         fname.append(sys.argv[fn])
         
 else:
-    print 'Type -h or --help to see other usage'
+    print ('Type -h or --help to see other usage')
     fin = raw_input('please enter the file name (must be .hdf5): ')
     fname.append(fin)
     if(fin == '-h' or fin == '--help'):
-        print 'There are 2 usages:'
-        print '1. python convertmultivar.py A.hdf5 B.hdf5 C.hdf5 ....'
-        print '2. python convertmultivar.py'+ ' to input a single file.'
+        print ('There are 2 usages:')
+        print ('1. python convertmultivar.py A.hdf5 B.hdf5 C.hdf5 ....')
+        print ('2. python convertmultivar.py'+ ' to input a single file.')
         sys.exit(0)
         
 for fn in fname:
-    print 'Opening file '+fn+' ...'
+    print ('Opening file '+fn+' ...')
     g = h5py.File(fn, 'r')
     datac = g['events/clock']
     datas = g['events/signal']
@@ -35,10 +35,10 @@ for fn in fname:
     tar_T  = []
     tar_t  = []
     tar_e  = []
-    print 'writing a tree...'
+    print ('writing a tree...')
     for i in range(enum):
         if i%1000 == 0:
-            print 'processing',i,'/',enum,' of data...'
+            print ('processing',i,'/',enum,' of data...')
         A1 = (datac[i],)
         A2 = (datas[i],)
         A3 = (datah[i],)
@@ -63,7 +63,7 @@ for fn in fname:
     kstart = fn.rfind('/')+1
     kend   = fn.find('.hdf5')
     fout   = fn[kstart:kend]
-    print 'Output file will be '+'data/'+fout+'.root'
+    print ('Output file will be '+'data/'+fout+'.root')
 
     array2root(out_e,'data/'+fout+'.root','tree', mode='recreate')
     array2root(out_c,'data/'+fout+'.root','tree', mode='update')
@@ -73,6 +73,6 @@ for fn in fname:
     array2root(out_t,'data/'+fout+'.root','tree', mode='update')
 
     g.close()
-    print 'Closing file '+fn+' ...'
-print 'done!'
+    print ('Closing file '+fn+' ...')
+print ('done!')
 
