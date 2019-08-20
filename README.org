@@ -3,7 +3,7 @@ This should be a starting point for new comers to get familiar with c++ and root
 
 * Download and build
 *root is required, if you haven't install it, please go to https://root.cern.ch and download it first!*
-#+BEGIN_SRC bash
+#+BEGIN_SRC sh
 git clone https://github.com/Hsin-Yeh/aliabaAnalyzer.git
 cd alibavaAnalyzer
 sudo easy_install pip
@@ -16,20 +16,20 @@ make
 
 * Data Convertion 
 The output data format from the alibava program should be hdf5. We will convert it to a root file by executing:
-#+BEGIN_SRC shell
+#+BEGIN_SRC sh
 python convertmultivar.py data/test.hdf5
 #+END_SRC 
 The output root file will be in the data directory 
 
 
 * Run the analysis code
-#+BEGIN_SRC bash
+#+BEGIN_SRC sh
 ls data/test.root
 ./makePlots
 #+END_SRC
 
 If you want to display plots on your screen
-#+BEGIN_SRC bash
+#+BEGIN_SRC sh
 ./makePlots -s
 #+END_SRC
 
@@ -38,12 +38,24 @@ You will find the output root file in "root_plot" and output pdf plots in "plots
 * Tips
 *** Get familiar with Git.
 I would recommend after you clone this code to local, checkout to your own branch and build your own code there. If you haven't have a github account, I would suggest you to create one first on https://github.com
-#+BEGIN_SRC bash
+#+BEGIN_SRC sh
 git branch
 git checkout -b your_branch_name
 git branch
 git push --set-upstream origin your_branch_name
 #+END_SRC
+
+After you made your modifications, basic git commands to push
+#+BEGIN_SRC sh
+git commit -a
+git push
+#+END_SRC
+
+and pull
+#+BEGIN_SRC sh
+git pull
+#+END_SRC
+
 Reason:
 1. Make the master branch clean
 2. Learn how to use git
