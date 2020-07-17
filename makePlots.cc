@@ -1,4 +1,3 @@
-#hi~~~~~~~~~~~~~~~~~~
 #ifndef makePlots_cxx
 #define makePlots_cxx
 
