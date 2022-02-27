@@ -11,9 +11,9 @@ pip install --user numpy root_numpy h5py
 make 
   #+END_SRC
 
-  *The pip install method works for me, but maybe not for other users. Should write a more general method here!!*
-  *Basically we will need numpy, root_numpy, h5py module for python code*
-  *MAC users may run into h5py errors, try this https://gist.github.com/wtxdew/5f700b4c9c07cf95415cd35338230188. (Thanks to Shih-Ling)*
+ * *The pip install method works for me, but maybe not for other users. Should write a more general method here!!*
+ * *Basically we will need numpy, root_numpy, h5py module for python code.*
+ * *MAC users may run into h5py errors, try this https://gist.github.com/wtxdew/5f700b4c9c07cf95415cd35338230188. (Thanks to Shih-Ling)*
   
 * Alternative: build in ntugrid5
   #+BEGIN_SRC sh
