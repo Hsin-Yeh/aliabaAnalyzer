@@ -13,6 +13,17 @@ make
 
   *The pip install method works for me, but maybe not for other users. Should write a more general method here!!*
   *Basically we will need numpy, root_numpy, h5py module for python code*
+  
+* Alternative: build in ntugrid5
+  #+BEGIN_SRC sh
+  # setup cmsenv first before running commands below. 
+  # cmsenv setup tutorial: https://quark-monday-89d.notion.site/NTUGRID5-settings-962ec2fc1f574208a244a3489d2bc978
+
+wget https://bootstrap.pypa.io/pip/3.6/get-pip.py && python3 get-pip.py --user
+~/.local/bin pip3 install --user numpy root_numpy h5py
+
+  # I am not sure if CMSSW installs pyROOT in python3, at least for me it doesn't work for python3. But python2.7 is sufficient for this code (maybe with some annoying warnings but who cares right)
+  #+END_SRC
 
 * Data Convertion 
   The output data format from the alibava program should be hdf5. We will convert it to a root file by executing:
